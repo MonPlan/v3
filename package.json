@@ -3,10 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "eslint": "^4.14.0",
+    "material-ui": "^1.0.0-beta.26",
+    "prettier": "^1.9.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-scripts": "1.0.17",
-    "trianglify": "^1.2.0"
+    "trianglify": "^1.2.0",
+    "typeface-roboto": "^0.0.45"
   },
   "scripts": {
     "start": "react-scripts start",

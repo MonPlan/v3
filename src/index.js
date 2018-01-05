@@ -1,8 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles'
+import { blue } from 'material-ui/colors'
+import 'typeface-roboto'
+import './index.css'
+import App from './App'
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+import registerServiceWorker from './registerServiceWorker'
+const theme = createMuiTheme({
+  palette: {
+    primary: blue
+  }
+})
+
+ReactDOM.render(
+  <MuiThemeProvider theme={theme}>
+    <App />
+  </MuiThemeProvider>,
+  document.getElementById('root')
+)
+registerServiceWorker()
