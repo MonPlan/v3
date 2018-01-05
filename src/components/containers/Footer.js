@@ -36,6 +36,12 @@ class Footer extends React.Component {
                 height={50}
                 alt="Monash Logo"
               />
+              <img
+                src="./images/logo_white.svg"
+                height={50}
+                alt="Monash Logo"
+                style={{ float: 'right' }}
+              />
             </Grid>
             <Grid item xs={12}>
               <Typography as="p" style={whiteFont} gutterBottom>
