@@ -5,9 +5,6 @@
   display: flex;
   flex-direction: row;
 }
-.App-header > * {
-  margin: 5;
-}
 
 .App-title {
   font-size: 1.5em;
@@ -18,7 +15,7 @@
   min-height: 878px;
   height: 878px;
   width: 100%;
-  background-image: url('./top.svg');
+  background-image: url('../assets/top.svg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -36,7 +33,7 @@
   min-height: 878px;
   height: 878px;
   width: 100%;
-  background-image: url('./bottom.svg');
+  background-image: url('../assets/bottom.svg');
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
