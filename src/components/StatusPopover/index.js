@@ -7,6 +7,8 @@ import axios from 'axios'
 import Config from '../../config/'
 import CircularProgress from 'material-ui/Progress/CircularProgress'
 
+import { blueGrey, green, orange, red } from 'material-ui/colors'
+
 class StatusPopover extends React.Component {
   state = {
     open: false,
@@ -24,7 +26,7 @@ class StatusPopover extends React.Component {
     setTimeout(this.loadInfo(), 5000)
   }
 
-  loadInfo() {
+  loadInfo = () => {
     const { API_URL, CALL_CONFIG } = Config.UPTIME_CONFIG
     axios
       .post(API_URL, CALL_CONFIG)
@@ -51,6 +53,23 @@ class StatusPopover extends React.Component {
     this.setState({
       open: false
     })
+  }
+
+  determineColor = statusCode => {
+    switch (statusCode) {
+      case 0:
+        return blueGrey[100]
+      case 1:
+        return blueGrey[200]
+      case 2:
+        return green[700]
+      case 8:
+        return orange[200]
+      case 9:
+        return red[300]
+      default:
+        return red[300]
+    }
   }
 
   render() {
@@ -95,7 +114,37 @@ class StatusPopover extends React.Component {
           <Paper>
             <CardContent>
               <Typography type="title">Network Status</Typography>
-              {this.state.loading ? <CircularProgress /> : <div>Loaded!</div>}
+              {this.state.loading ? (
+                <CircularProgress />
+              ) : (
+                <div>
+                  {this.state.monitors.map((item, key) => {
+                    console.log(item)
+                    return (
+                      <div
+                        style={{
+                          display: 'flex',
+                          flexDirection: 'row',
+                          padding: 10
+                        }}>
+                        <div style={{ flex: 1 }}>
+                          <div
+                            style={{
+                              width: 35,
+                              height: 35,
+                              backgroundColor: this.determineColor(item.status),
+                              borderRadius: '100%'
+                            }}
+                          />
+                        </div>
+                        <div style={{ flex: 2 }}>
+                          <Typography>{item.friendly_name}</Typography>
+                        </div>
+                      </div>
+                    )
+                  }) || <div>No Data is Currently Available</div>}
+                </div>
+              )}
             </CardContent>
           </Paper>
         </Popover>

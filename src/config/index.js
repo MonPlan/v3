@@ -4,11 +4,7 @@ const config = {
   UPTIME_CONFIG: {
     CALL_CONFIG: {
       api_key: 'u371400-90368b6eeaa7105854d1235c',
-      monitors: '778682228-778451072-778682230-779043962',
-      custom_uptime_ratios: '7-30-45',
-      response_times: '1',
-      response_times_average: '60',
-      customUptimeRatio: '3'
+      monitors: '778682228-778451072-778682230-779043962'
     },
     API_URL: 'https://api.uptimerobot.com/v2/getMonitors'
   }
