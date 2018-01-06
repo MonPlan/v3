@@ -19,6 +19,24 @@
   height: 878px;
   width: 100%;
   background-image: url('./top.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-origin: padding-box;
+  background-position-x: 50%;
+  background-position-y: 0px;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-bottom {
+  font-size: large;
+  min-height: 878px;
+  height: 878px;
+  width: 100%;
+  background-image: url('./bottom.svg');
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;

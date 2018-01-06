@@ -1,6 +1,5 @@
 import React from 'react'
 import Config from '../../config/'
-import './index.css'
 import { Typography, Grid } from 'material-ui'
 const flexGrow = {
   textAlign: 'left',

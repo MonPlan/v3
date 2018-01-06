@@ -4,6 +4,7 @@ import { Card, Typography, Grid, Divider } from 'material-ui'
 import Button from 'material-ui/Button/Button'
 import CardContent from 'material-ui/Card/CardContent'
 import IntroCard from './components/containers/IntroContainer'
+import Feedback from './components/containers/Feedback'
 import Footer from './components/containers/Footer'
 class App extends Component {
   render() {
@@ -16,7 +17,14 @@ class App extends Component {
           <div className="Card-container">
             <IntroCard />
           </div>
+          <div className="Card-container">
+            <Feedback />
+          </div>
+          <div className="Card-container">
+            <IntroCard />
+          </div>
         </div>
+        <div className="App-bottom" />
         <Footer />
       </div>
     )

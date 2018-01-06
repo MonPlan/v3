@@ -18,6 +18,7 @@ export default function IntroContainer() {
         paddingLeft: '2.5em',
         paddingRight: '2.5em',
         paddingTop: '1em',
+        paddingBottom: '1em',
         justifySelf: 'center',
         display: 'flex',
         flexDirection: 'column'
@@ -47,6 +48,13 @@ export default function IntroContainer() {
               guide you towards finding Monash courses that can lead you towards
               your dream career.
             </Typography>
+            <Button
+              raised
+              color="primary"
+              style={{ margin: 10 }}
+              href="https://myfuture-prod.appspot.com/">
+              Explore my journey
+            </Button>
           </div>
           <div style={styles.descriptionContainers}>
             <Typography type="title">
@@ -57,6 +65,13 @@ export default function IntroContainer() {
               and is aimed at improving the Monash Journey, from the start and
               all the way to the completion of your course.
             </Typography>
+            <Button
+              raised
+              color="primary"
+              style={{ margin: 10 }}
+              href="https://monplan-prod.appspot.com/">
+              Plan my course
+            </Button>
           </div>
           <div style={styles.descriptionContainers}>
             <Typography type="title">
