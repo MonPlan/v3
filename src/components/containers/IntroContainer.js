@@ -13,10 +13,7 @@ export default function IntroContainer() {
       style={{
         width: '70%',
         marginTop: 150,
-        paddingLeft: '2.5em',
-        paddingRight: '2.5em',
-        paddingTop: '1em',
-        paddingBottom: '1em',
+        padding: '2em',
         justifySelf: 'center',
         display: 'flex',
         flexDirection: 'column'

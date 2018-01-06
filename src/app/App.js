@@ -16,17 +16,10 @@ class App extends Component {
           </div>
         </header>
         <div className="App-intro">
-          <div className="Card-container">
-            <IntroCard />
-          </div>
-          <div className="Card-container">
-            <Feedback />
-          </div>
-          <div className="Card-container">
-            <IntroCard />
-          </div>
+          <IntroCard />
+          <Feedback />
+          <IntroCard />
         </div>
-        <div className="App-bottom" />
         <Footer />
       </div>
     )
