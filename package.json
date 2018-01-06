@@ -10,7 +10,8 @@
     "react-dom": "^16.2.0",
     "react-scripts": "1.0.17",
     "trianglify": "^1.2.0",
-    "typeface-roboto": "^0.0.45"
+    "typeface-roboto": "^0.0.45",
+    "whatwg-fetch": "^2.0.3"
   },
   "scripts": {
     "start": "react-scripts start",

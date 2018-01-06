@@ -1,7 +1,5 @@
 import React from 'react'
-import { Card, Typography, Grid, Divider } from 'material-ui'
-import Button from 'material-ui/Button/Button'
-import CardContent from 'material-ui/Card/CardContent'
+import { Button, Card, CardContent, Typography, Divider } from 'material-ui'
 
 const styles = {
   descriptionContainers: {

@@ -51,6 +51,7 @@ class Footer extends React.Component {
                 <a
                   href="https://monplan.github.io"
                   target="_blank"
+                  rel="noopener noreferrer"
                   style={{ whiteFont }}>
                   monPlan
                 </a>{' '}
@@ -61,12 +62,14 @@ class Footer extends React.Component {
                 <a
                   href="https://monash.edu/"
                   target="_blank"
+                  rel="noopener noreferrer"
                   style={{ color: '#ddd' }}>
                   Monash University
                 </a>. ABN 12 377 614 012. &nbsp;
                 <a
                   href="http://monash.edu/accessibility.html"
                   target="_blank"
+                  rel="noopener noreferrer"
                   style={{ whiteFont }}>
                   Accessibility
                 </a>{' '}
@@ -74,6 +77,7 @@ class Footer extends React.Component {
                 <a
                   href="http://www.monash.edu/disclaimer-copyright"
                   target="_blank"
+                  rel="noopener noreferrer"
                   style={{ whiteFont }}>
                   Disclaimer and copyright
                 </a>{' '}
@@ -81,6 +85,7 @@ class Footer extends React.Component {
                 <a
                   href="http://monash.edu/privacy.html"
                   target="_blank"
+                  rel="noopener noreferrer"
                   style={{ whiteFont }}>
                   Privacy
                 </a>
@@ -92,7 +97,10 @@ class Footer extends React.Component {
                 We acknowledge and pay respects to the Elders and Traditional
                 Owners of the land on which our five Australian campuses stand.
                 &nbsp;
-                <a href="http://monash.edu/about/indigenous/" target="_blank">
+                <a
+                  href="http://monash.edu/about/indigenous/"
+                  rel="noopener noreferrer"
+                  target="_blank">
                   Information for Indigenous Australians
                 </a>
               </Typography>
