@@ -3,17 +3,16 @@ import { Button, Card, CardContent, Typography, Divider } from 'material-ui'
 
 const styles = {
   descriptionContainers: {
-    flex: 1,
-    padding: 10
+    flex: 2
   }
 }
 export default function IntroContainer() {
   return (
     <Card
       style={{
-        width: '70%',
+        width: '70vw',
+        padding: '2.5em',
         marginTop: 150,
-        padding: '2em',
         justifySelf: 'center',
         display: 'flex',
         flexDirection: 'column'
@@ -33,7 +32,13 @@ export default function IntroContainer() {
           Explore my journey
         </Button>
         <Divider />
-        <div style={{ display: 'flex', flexDirection: 'row' }}>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            // padding: '2em',
+            width: '100%'
+          }}>
           <div style={styles.descriptionContainers}>
             <Typography type="title">
               Explore interesting jobs to find awesome careers
@@ -75,14 +80,12 @@ export default function IntroContainer() {
             <Typography style={{ marginTop: 10 }}>
               Some of team members occasionally build other applications which
               also impact other students lives.
-              <ul>
-                <li>
-                  <a href="https://geckodm.github.io">
-                    <b>GeckoDM</b>
-                  </a>: A Download Manager for Echo360
-                </li>
-                <li>RUUP</li>
-              </ul>
+              <li>
+                <a href="https://geckodm.github.io">
+                  <b>GeckoDM</b>
+                </a>: A Download Manager for Echo360
+              </li>
+              <li>RUUP</li>
             </Typography>
           </div>
         </div>

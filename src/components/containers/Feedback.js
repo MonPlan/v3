@@ -16,14 +16,12 @@ export default function FeedbackContainer() {
   return (
     <Card
       style={{
-        width: '70%',
+        width: '70vw',
+        padding: '2.5em',
         marginTop: 20,
-        paddingLeft: '2.5em',
-        paddingRight: '2.5em',
-        paddingTop: '1em',
-        justifySelf: 'center'
-        // display: 'flex',
-        // flexDirection: 'column'
+        justifySelf: 'center',
+        display: 'flex',
+        flexDirection: 'column'
       }}>
       <CardContent style={{ display: 'block' }}>
         <Typography type="title">What our users thought</Typography>
