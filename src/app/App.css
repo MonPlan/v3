@@ -25,3 +25,11 @@
   flex-direction: row;
   justify-content: center;
 }
+
+.footer a {
+  color: #fff;
+}
+
+.footer a:visited {
+  color: #909090;
+}

@@ -24,14 +24,14 @@ export default function IntroContainer() {
         }}>
         <Typography
           type="display4"
-          style={{ color: '#757575', fontSize: '2.5em' }}
+          style={{ color: '#2e2e2e', fontSize: '2.5em' }}
           gutterBottom>
-          We build various webapps which <br /> impact other students uni lives.
+          We build various webapps which impact students lives.
         </Typography>
-        <Button raised color="primary" style={{ margin: 10 }}>
+        {/* <Button raised color="primary" style={{ margin: 10 }}>
           Explore my journey
-        </Button>
-        <Divider />
+        </Button> */}
+        <Divider style={{ margin: '1em' }} />
         <div
           style={{
             display: 'flex',

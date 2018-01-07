@@ -12,6 +12,7 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-scripts": "1.0.17",
+    "react-slick": "^0.16.0",
     "trianglify": "^1.2.0",
     "typeface-roboto": "^0.0.45",
     "whatwg-fetch": "^2.0.3"

@@ -26,7 +26,7 @@ const whiteFont = {
 class Footer extends React.Component {
   render() {
     return (
-      <div style={flexGrow}>
+      <div style={flexGrow} className="footer">
         <div style={footerStyle}>
           <Grid container spacing={24}>
             <Grid item xs={12}>
