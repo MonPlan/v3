@@ -1,12 +1,16 @@
 import React, { Component } from 'react'
+
+import { Route, Router, Switch } from 'react-router-dom'
+
+import history from './history'
 import './App.css'
-import IntroCard from '../components/containers/IntroContainer'
-import Feedback from '../components/containers/Feedback'
 import Footer from '../components/containers/Footer'
 
 import Status from '../components/StatusPopover'
 import trianglify from 'trianglify'
 import { blueGrey, lightBlue } from 'material-ui/colors'
+
+import HomePage from '../pages/Home'
 var pattern = trianglify({
   width: 1500,
   height: 1500,
@@ -15,26 +19,24 @@ var pattern = trianglify({
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src="./images/logo_white.svg" width={200} alt="logo" />
-          <div style={{ justifySelf: 'flex-end', flex: 1 }}>
-            <Status />
-          </div>
-        </header>
-        <div
-          className="App-intro"
-          style={{ backgroundImage: 'url(' + pattern + ')' }}>
+      <Router history={history}>
+        <div className="App">
+          <header className="App-header">
+            <img src="./images/logo_white.svg" width={200} alt="logo" />
+            <div style={{ justifySelf: 'flex-end', flex: 1 }}>
+              <Status />
+            </div>
+          </header>
           <div
-            style={{
-              flexDirection: 'column'
-            }}>
-            <IntroCard />
-            <Feedback />
+            className="App-intro"
+            style={{ backgroundImage: 'url(' + pattern + ')' }}>
+            <Switch>
+              <Route exact path="/" component={HomePage} />
+            </Switch>
           </div>
+          <Footer />
         </div>
-        <Footer />
-      </div>
+      </Router>
     )
   }
 }
