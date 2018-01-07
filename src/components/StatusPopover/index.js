@@ -1,12 +1,17 @@
 import React from 'react'
 import { findDOMNode } from 'react-dom'
-import { Button, Popover, Typography } from 'material-ui'
-import Paper from 'material-ui/Paper/Paper'
-import CardContent from 'material-ui/Card/CardContent'
+import {
+  Button,
+  IconButton,
+  Paper,
+  CardContent,
+  Popover,
+  Typography
+} from 'material-ui'
 import axios from 'axios'
 import Config from '../../config/'
 import CircularProgress from 'material-ui/Progress/CircularProgress'
-
+import RefreshIcon from 'material-ui-icons/Refresh'
 import { blueGrey, green, orange, red } from 'material-ui/colors'
 
 class StatusPopover extends React.Component {
@@ -40,6 +45,11 @@ class StatusPopover extends React.Component {
       .catch(err => {
         console.error(err)
       })
+  }
+
+  handleReload = () => {
+    this.setState({ loading: true, monitors: [] })
+    window.setTimeout(this.loadInfo(), 2000)
   }
 
   handleClickButton = () => {
@@ -113,7 +123,22 @@ class StatusPopover extends React.Component {
           style={{ padding: 10 }}>
           <Paper>
             <CardContent>
-              <Typography type="title">Network Status</Typography>
+              <div style={{ display: 'flex', flexDirection: 'row' }}>
+                <div
+                  style={{
+                    flex: 3,
+                    flexDirection: 'column',
+                    justifyContent: 'center'
+                  }}>
+                  <Typography type="title">Network Status</Typography>
+                </div>
+                <div
+                  style={{ flex: 1, justifySelf: 'flex-end', float: 'right' }}>
+                  <IconButton onClick={this.handleReload}>
+                    <RefreshIcon />
+                  </IconButton>
+                </div>
+              </div>
               {this.state.loading ? (
                 <CircularProgress />
               ) : (
