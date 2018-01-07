@@ -11,6 +11,7 @@ import trianglify from 'trianglify'
 import { blueGrey, lightBlue } from 'material-ui/colors'
 
 import HomePage from '../pages/Home'
+import UnknownPage from '../pages/404'
 var pattern = trianglify({
   width: 1500,
   height: 1500,
@@ -32,6 +33,7 @@ class App extends Component {
             style={{ backgroundImage: 'url(' + pattern + ')' }}>
             <Switch>
               <Route exact path="/" component={HomePage} />
+              <Route exact component={UnknownPage} />
             </Switch>
           </div>
           <Footer />
