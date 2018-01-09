@@ -56,7 +56,7 @@ class NoMatch extends React.Component {
                     type="body2"
                     style={{ color: 'white' }}
                     gutterBottom>
-                    For monPlan Team Develpers, you may be seeing this because
+                    For monPlan Team Developers, you may be seeing this because
                     of UAM issues, please contact the Ops and Infrastructure
                     Team
                   </Typography>

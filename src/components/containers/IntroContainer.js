@@ -3,7 +3,8 @@ import { Button, Card, CardContent, Typography, Divider } from 'material-ui'
 
 const styles = {
   descriptionContainers: {
-    flex: 2
+    flex: 2,
+    padding: 10
   }
 }
 export default function IntroContainer() {

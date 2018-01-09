@@ -3,15 +3,14 @@ import React, { Component } from 'react'
 import { Route, Router, Switch } from 'react-router-dom'
 
 import history from './history'
+import trianglify from 'trianglify'
+import { blueGrey, lightBlue } from 'material-ui/colors'
 import './App.css'
 import Footer from '../components/containers/Footer'
 
 import Status from '../components/StatusPopover'
-import trianglify from 'trianglify'
-import { blueGrey, lightBlue } from 'material-ui/colors'
+import { HomePage, UnknownPage, TeamPage } from '../pages'
 
-import HomePage from '../pages/Home'
-import UnknownPage from '../pages/404'
 var pattern = trianglify({
   width: 1500,
   height: 1500,
@@ -33,7 +32,8 @@ class App extends Component {
             style={{ backgroundImage: 'url(' + pattern + ')' }}>
             <Switch>
               <Route exact path="/" component={HomePage} />
-              <Route exact component={UnknownPage} />
+              <Route path="/team" component={TeamPage} />
+              <Route component={UnknownPage} />
             </Switch>
           </div>
           <Footer />
