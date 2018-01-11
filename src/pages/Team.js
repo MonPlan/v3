@@ -12,7 +12,7 @@ const style = {
   display: 'flex',
   justifyContent: 'center'
 }
-
+ 
 class TeamPage extends React.Component {
   render() {
     return (
