@@ -49,7 +49,9 @@ export default function TeamCard({
         }}>
         <Typography type="body2">{name}</Typography>
         <Typography type="caption">{role}</Typography>
-        <Typography type="caption">Current Degree: {degree}</Typography>
+        {degree && (
+          <Typography type="caption">Current Degree: {degree}</Typography>
+        )}
       </CardContent>
       <CardContent style={styles.centerAlign}>
         <div style={{ display: 'flex' }}>
